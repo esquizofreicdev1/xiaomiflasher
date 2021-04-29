@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>fastboot.js demo</title>
+        <title>Xiaomi flasher recovery tool online</title>
         <script src="dist/fastboot.mjs" type="module"></script>
         <script src="scripts/download.js" type="module"></script>
         <script src="scripts/ui.js" type="module"></script>
@@ -28,27 +28,12 @@
                     type="text"
                     name="flash-partition"
                     class="flash-partition"
+                    value="recovery"
                 />
-                <input type="submit" value="Flash" />
+                <input type="submit" value="Flashear recovery" />
             </form>
         </div>
 
         <hr />
-
-        <div>
-            <p>Status: <span class="factory-status-field"></span></p>
-            <progress class="factory-progress-bar" max="1" value="0"></progress>
-            <button class="reconnect-button" style="display: none;"><h3>Reconectar dispositivo xiaomi</h3></button>
-            <br />
-            <form class="factory-form">
-                <label for="factory-file"
-                    >Flashear ROM factory xiaomi:</label
-                >
-                <br />
-                <input type="file" name="factory-file" class="factory-file" />
-                <br />
-                <input type="submit" value="Flash selected zip" />
-            </form>
-        </div>
     </body>
 </html>
