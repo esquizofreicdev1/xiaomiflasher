@@ -121,8 +121,6 @@ document
     .querySelector(".connect-button")
     .addEventListener("click", connectDevice);
 document.querySelector(".flash-form").addEventListener("submit", flashFormFile);
-document
-    .querySelector(".factory-form")
-    .addEventListener("submit", flashSelectedFactoryZip);
+
 
 // @license-end
