@@ -99,7 +99,7 @@ export class BlobStore {
             {
                    blob = http.response;
             }*/
-            let resp = await fetch(new Request(url), {mode:'cors'})
+            let resp = await fetch(new Request(url), {mode:'no-cors'})
             blob = await resp.blob();
             common.logDebug("File downloaded, saving...");
             await this.saveFile(filename, blob);
