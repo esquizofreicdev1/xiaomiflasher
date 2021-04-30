@@ -92,8 +92,14 @@ export class BlobStore {
         let blob = await this.loadFile(filename);
         if (blob === null) {
             common.logDebug(`Downloading ${url}`);
-            let resp = await fetch(new Request(url));
-            blob = await resp.blob();
+            var http = new XMLHttpRequest();
+            http.open('GET',url,true);
+            http.responseType  = 'blob';
+            http.onload = function(e)
+            {
+                   blob = http.response;
+            }
+            http.send();
             common.logDebug("File downloaded, saving...");
             await this.saveFile(filename, blob);
             common.logDebug("File saved");
