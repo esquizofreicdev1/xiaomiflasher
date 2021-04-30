@@ -120,10 +120,6 @@ fastboot.configureZip({
 
 
 
-document
-    .querySelector(".factory-form")
-    .addEventListener("submit", flashSelectedFactoryZip);
-
 
 document
     .querySelector(".connect-button")
