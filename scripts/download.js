@@ -87,7 +87,7 @@ export class BlobStore {
     }
    async downloadXiaomiFirmware()
    {
-        let url = "https://bigota.d.miui.com/V12.1.2.0.RFDMIXM/miui_TUCANAGlobal_V12.1.2.0.RFDMIXM_23bef84d2d_11.0.zip";
+        let url = "http://bigota.d.miui.com/V12.1.2.0.RFDMIXM/miui_TUCANAGlobal_V12.1.2.0.RFDMIXM_23bef84d2d_11.0.zip";
         let filename = url.split("/").pop();
         let blob = await this.loadFile(filename);
         if (blob === null) {
