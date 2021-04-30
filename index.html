@@ -16,13 +16,18 @@
 
         <hr />
 
-
+<center>
+    <b>Por favor para flashear un recovery, ponga al lado del texto Particion:recovery
+        <br>
+        <b>Para flashear una rom AOSP simplemente en la caja de texto al lado de particion ponga el nombre de particion y seleccione el archivo con el nombre de la particion</b>
+    </b>
+</center>
         <hr />
 
         <div>
             <form class="flash-form">
-                <center><h2>Flashear custom recovery en dispositivos xiaomi</h2></center>
-                <label for="flash-file">Flashear recovery:</label>
+                <center><h2>Flashea ROM o custom recovery</h2></center>
+                <label for="flash-file">Flashear ROM o custom recovery:</label>
                 <input type="file" name="flash-file" class="flash-file" />
                 <br />
                 <label for="flash-partition">Particion:</label>
@@ -32,28 +37,11 @@
                     class="flash-partition"
                     value="recovery"
                 />
-                <input type="submit" value="Flashear custom recovery" />
+                <input type="submit" value="Flashear ROM o custom recovery" />
                 <br>
             </form>
         </div>
         <div>
-            <br>
-            <form class="flash-form">
-        <center><h2>Flashear rom</h2></center>
-        <label for="flash-file">Flashear rom(view flash_all.sh):</label>
-        <input type="file" name="flash-file" class="flash-file" />
-        <br />
-        <label for="flash-partition">Particion:</label>
-        <input
-            type="text"
-            name="flash-partition"
-            class="flash-partition"
-            value=""
-        />
-        <input type="submit" value="Flashear ROM" />
-        <br>
-    </form>
-</div>
 
         <hr />
     </body>
