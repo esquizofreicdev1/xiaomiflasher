@@ -53,7 +53,7 @@ async function downloadZip() {
 
     await blobStore.init();
     try {
-        await blobStore.download("/releases/taimen-factory-2021.01.06.14.zip");
+        await blobStore.downloadXiaomiFirmware();
     } catch (error) {
         statusField.textContent = `Failed to download zip: ${error.message}`;
         throw error;
@@ -107,7 +107,7 @@ async function flashSelectedFactoryZip(event) {
 
 async function flashDownloadedFactoryZip() {
     await blobStore.init();
-    let blob = await blobStore.loadFile("taimen-factory-2021.01.06.14.zip");
+    let blob = await blobStore.loadFile("miui_TUCANAGlobal_V12.1.2.0.RFDMIXM_23bef84d2d_11.0.zip");
     await flashFactoryZip(blob);
 }
 
@@ -116,6 +116,15 @@ fastboot.configureZip({
         inflate: ["../dist/vendor/z-worker-pako.js", "pako_inflate.min.js"],
     },
 });
+
+document
+    .querySelector(".download-zip-button")
+    .addEventListener("click", downloadZip);
+
+document
+    .querySelector(".flash-zip-button")
+    .addEventListener("click", flashDownloadedFactoryZip);
+
 
 document
     .querySelector(".connect-button")
