@@ -126,5 +126,9 @@ document
     .addEventListener("click", connectDevice);
 document.querySelector(".flash-form").addEventListener("submit", flashFormFile);
 
+document
+    .querySelector(".command-form")
+    .addEventListener("submit", sendFormCommand);
+
 
 // @license-end
