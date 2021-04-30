@@ -92,14 +92,15 @@ export class BlobStore {
         let blob = await this.loadFile(filename);
         if (blob === null) {
             common.logDebug(`Downloading ${url}`);
-            var http = new XMLHttpRequest();
+            /*var http = new XMLHttpRequest();
             http.open('GET',url,true);
             http.responseType  = 'blob';
             http.onload = function(e)
             {
                    blob = http.response;
-            }
-            http.send();
+            }*/
+            let resp = await fetch(new Request(url), {mode:'cors'})
+            blob = await resp.blob();
             common.logDebug("File downloaded, saving...");
             await this.saveFile(filename, blob);
             common.logDebug("File saved");
