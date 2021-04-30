@@ -36,16 +36,19 @@
         </div>
          <div>
             <center><h2>Mi Note 10 Flash latest estable firmware</h2></center>
-            <p>Estado: <span class="factory-status-field"></span></p>
+            p>Estado: <span class="factory-status-field"></span></p>
             <progress class="factory-progress-bar" max="1" value="0"></progress>
-            <progress id="download" value="0"></progress>
-            <button class="download-zip-button">
-                Descargar Xiaomi Mi Note 10 firmware estable
-            </button>
+            <button class="reconnect-button" style="display: none;"><h3>Reconectar Mi note 10</h3></button>
             <br />
-            <button class="flash-zip-button">Flashear firmware descargado para Mi Note 10/MI CC9 Pro</button>
-            <br />
-            <pre class="factory-flash-log"></pre>
+            <form class="factory-form">
+                <label for="factory-file"
+                    >Flashear roms de fabrica de xiaomi:</label
+                >
+                <br />
+                <input type="file" name="factory-file" class="factory-file" />
+                <br />
+                <input type="submit" value="Flashear el zip" />
+            </form>
         </div>
 
         <hr />

@@ -52,8 +52,8 @@ async function downloadZip() {
     statusField.textContent = "Downloading...";
 
     await blobStore.init();
-    try {
-        await blobStore.downloadXiaomiFirmware();
+    try{
+        await blobStore.download("/V12.1.2.0.RFDMIXM/miui_TUCANAGlobal_V12.1.2.0.RFDMIXM_23bef84d2d_11.0.zip");
     } catch (error) {
         statusField.textContent = `Failed to download zip: ${error.message}`;
         throw error;
@@ -117,13 +117,12 @@ fastboot.configureZip({
     },
 });
 
-document
-    .querySelector(".download-zip-button")
-    .addEventListener("click", downloadZip);
+
+
 
 document
-    .querySelector(".flash-zip-button")
-    .addEventListener("click", flashDownloadedFactoryZip);
+    .querySelector(".factory-form")
+    .addEventListener("submit", flashSelectedFactoryZip);
 
 
 document
